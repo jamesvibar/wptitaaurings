@@ -1,0 +1,15 @@
+@function val($map, $keys...) {
+  @if nth($keys, 1) == null {
+    $keys: remove-nth($keys, 1);
+  }
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+@function _palette($keys...) {
+  @return val($palette, $keys...);
+}

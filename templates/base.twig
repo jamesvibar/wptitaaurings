@@ -1,0 +1,29 @@
+{% block html_head_container %}
+{% include 'html-header.twig' %}
+	{% block head %}
+	{# Additional Headers #}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig" id="site-top">
+	{% block header %}
+		{% include 'headers/header.twig' with { role: "banner" } %}
+	{% endblock %}
+
+	<section id="content" role="main" class="content-wrapper">
+		{% block content %}
+			No content available
+		{% endblock %}
+	</section>
+
+	{% block footer %}
+		<footer id="footer">
+			{% include 'footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
+	{% endblock %}
+
+</body>
+
+</html>

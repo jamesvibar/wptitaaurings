@@ -1,0 +1,16 @@
+
+{# Base Header Template #}
+
+{% set h_role = ' role="' ~ role ~ '"' %}
+
+<header id="site-header"{{ h_role }} style="background-image:url('{{ header_image }}')">
+  <div class="container">
+    <div class="top-bar">
+      {% include "/navs/nav.twig" with { 'menu': menu.get_items } %}
+
+      <div class="logo">
+        {{ logo }}
+      </div
+    </div>
+  </div>
+</header>
