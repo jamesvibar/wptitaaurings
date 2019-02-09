@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"all.js":[function(require,module,exports) {
+},{"./..\\fonts\\Ananda.woff2":[["Ananda.4fbbbb31.woff2","../fonts/Ananda.woff2"],"../fonts/Ananda.woff2"],"./..\\fonts\\Ananda.woff":[["Ananda.7f655bf3.woff","../fonts/Ananda.woff"],"../fonts/Ananda.woff"],"./..\\fonts\\AnandaBlack.woff2":[["AnandaBlack.95bd6907.woff2","../fonts/AnandaBlack.woff2"],"../fonts/AnandaBlack.woff2"],"./..\\fonts\\AnandaBlack.woff":[["AnandaBlack.b2b4dd98.woff","../fonts/AnandaBlack.woff"],"../fonts/AnandaBlack.woff"],"./..\\fonts\\Gotham-Bold.woff2":[["Gotham-Bold.81379964.woff2","../fonts/Gotham-Bold.woff2"],"../fonts/Gotham-Bold.woff2"],"./..\\fonts\\Gotham-Bold.woff":[["Gotham-Bold.7f7e1605.woff","../fonts/Gotham-Bold.woff"],"../fonts/Gotham-Bold.woff"],"./..\\fonts\\Gotham-Book.woff2":[["Gotham-Book.e9f96037.woff2","../fonts/Gotham-Book.woff2"],"../fonts/Gotham-Book.woff2"],"./..\\fonts\\Gotham-Book.woff":[["Gotham-Book.9316bc27.woff","../fonts/Gotham-Book.woff"],"../fonts/Gotham-Book.woff"],"./..\\fonts\\Gotham-Medium.woff2":[["Gotham-Medium.dcdfe38f.woff2","../fonts/Gotham-Medium.woff2"],"../fonts/Gotham-Medium.woff2"],"./..\\fonts\\Gotham-Medium.woff":[["Gotham-Medium.b074dd9f.woff","../fonts/Gotham-Medium.woff"],"../fonts/Gotham-Medium.woff"],"./..\\fonts\\Gotham-Thin.woff2":[["Gotham-Thin.644b52b8.woff2","../fonts/Gotham-Thin.woff2"],"../fonts/Gotham-Thin.woff2"],"./..\\fonts\\Gotham-Thin.woff":[["Gotham-Thin.cb57ce42.woff","../fonts/Gotham-Thin.woff"],"../fonts/Gotham-Thin.woff"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"all.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/main.scss");
@@ -211,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54361" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51905" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

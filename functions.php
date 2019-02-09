@@ -75,6 +75,7 @@ class TitaAurings extends Timber\Site {
 	public function add_to_context( $context ) {
 		$context['menu'] = new Timber\Menu('primary_menu');
 		$context['logo'] = get_custom_logo();
+		$context['footer_bg'] = get_template_directory_uri() . '/static/images/footer-bg.jpg';
 		$context['site'] = $this;
 		return $context;
 	}

@@ -1,6 +1,21 @@
+// Setup
 @import "./abstract/variables";
 @import "./abstract/functions";
+@import "./abstract/mixins";
+@import "~sass-mq";
 
-@import "./base/_normalize";
+// Base
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/general";
 
+// Components
+@import "./components/buttons";
+
+// Layouts
 @import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/footer";
+
+// Vendors
+@import "~bootstrap/scss/bootstrap-grid";

@@ -3,14 +3,34 @@
 
 {% set h_role = ' role="' ~ role ~ '"' %}
 
-<header id="site-header"{{ h_role }} style="background-image:url('{{ header_image }}')">
+<header id="site-header"{{ h_role }} style="background-image:url('{% if header_image %}{{ header_image }}{%- else -%}https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940{% endif %}')">
   <div class="container">
-    <div class="top-bar">
-      {% include "/navs/nav.twig" with { 'menu': menu.get_items } %}
+    {# Site Top Bar #}
+    <div id="top-bar" class="row">
+      <div class="col-sm-12 top-bar-container">
+          {% include "/navs/nav.twig" with { 'menu': menu.get_items } %}
 
-      <div class="logo">
-        {{ logo }}
-      </div
+          <div id="site-logo">
+            {{- logo | default('Please add your logo at Customizer > Site Identity') -}}
+          </div>
+
+          <div class="top-bar__contact">
+            {{- contact | default('(+63) 905 669 5251') -}}
+          </div>
+      </div>
     </div>
+    
+    {# Hero #}
+    <div class="hero-main">
+        {%- if headline -%}
+          {%- set headline = headline -%}
+        {%- else -%}
+          {%- set headline = post.title -%}
+        {%- endif -%}
+        <h1 class="hero-main__headline">{{- headline | default('Placeholder') -}}</h1>
+
+        <a href="#content" class="hero-main__button btn btn-white" role="button">Explore</a>
+    </div>
+
   </div>
 </header>

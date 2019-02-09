@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  padding: 1.1em 3em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+
+  &.btn-white {
+    background: _palette(whitelink);
+    color: _palette(blacklink);
+    border: 1px solid _pallete(whitelink);
+  }
+}

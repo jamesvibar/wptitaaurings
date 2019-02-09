@@ -1,0 +1,12 @@
+#site-footer {
+  color: _palette(whitelink);
+
+  .footer-top .container,
+  .footer-bottom .container {
+    padding: 2em;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid _palette(whitelink);
+  }
+}

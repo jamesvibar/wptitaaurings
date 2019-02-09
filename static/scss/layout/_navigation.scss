@@ -1,0 +1,27 @@
+#navigation {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
+    li {
+      display: block;
+      transition: transform 200ms ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      & > a {
+        padding: 0.4em 0.4em;
+        margin-right: 0.3em;
+        color: _palette(whitelink);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.85em;
+        @include mq($from: wide) {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}

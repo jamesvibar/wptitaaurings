@@ -29,7 +29,7 @@ module.exports = {
     ignoreInitial: true
   },
   server: false,
-  proxy: "http://one.wordpress.test",
+  proxy: "http://two.wordpress.test",
   port: 3000,
   middleware: false,
   serveStatic: [],

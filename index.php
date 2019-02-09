@@ -14,6 +14,7 @@
  */
 
 $context = Timber::get_context();
+// Get list of blot posts
 $context['posts'] = new Timber\PostQuery();
 $templates = array( 'index.twig' );
 Timber::render( $templates, $context );
