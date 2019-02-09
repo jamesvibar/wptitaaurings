@@ -12,18 +12,9 @@ A premium wordpress theme template for Redkite.
 - Browsersync
 - Parcel
 
-## Commands
+## Command
 
-<<<<<<< HEAD
-Test!!
-
-<code>
-npm start                 start development server
-npm run parcel:build:     build assets for production
-</code>
-=======
 <pre>
   npm start                 start development server
   npm run parcel:build:     build assets for production
 </pre>
->>>>>>> origin
