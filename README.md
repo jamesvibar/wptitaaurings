@@ -14,9 +14,16 @@ A premium wordpress theme template for Redkite.
 
 ## Commands
 
+<<<<<<< HEAD
 Test!!
 
 <code>
 npm start                 start development server
 npm run parcel:build:     build assets for production
 </code>
+=======
+<pre>
+  npm start                 start development server
+  npm run parcel:build:     build assets for production
+</pre>
+>>>>>>> origin
