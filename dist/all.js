@@ -176,15 +176,102 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Ananda.woff2":[["Ananda.4fbbbb31.woff2","../fonts/Ananda.woff2"],"../fonts/Ananda.woff2"],"./..\\fonts\\Ananda.woff":[["Ananda.7f655bf3.woff","../fonts/Ananda.woff"],"../fonts/Ananda.woff"],"./..\\fonts\\AnandaBlack.woff2":[["AnandaBlack.95bd6907.woff2","../fonts/AnandaBlack.woff2"],"../fonts/AnandaBlack.woff2"],"./..\\fonts\\AnandaBlack.woff":[["AnandaBlack.b2b4dd98.woff","../fonts/AnandaBlack.woff"],"../fonts/AnandaBlack.woff"],"./..\\fonts\\Gotham-Bold.woff2":[["Gotham-Bold.81379964.woff2","../fonts/Gotham-Bold.woff2"],"../fonts/Gotham-Bold.woff2"],"./..\\fonts\\Gotham-Bold.woff":[["Gotham-Bold.7f7e1605.woff","../fonts/Gotham-Bold.woff"],"../fonts/Gotham-Bold.woff"],"./..\\fonts\\Gotham-Book.woff2":[["Gotham-Book.e9f96037.woff2","../fonts/Gotham-Book.woff2"],"../fonts/Gotham-Book.woff2"],"./..\\fonts\\Gotham-Book.woff":[["Gotham-Book.9316bc27.woff","../fonts/Gotham-Book.woff"],"../fonts/Gotham-Book.woff"],"./..\\fonts\\Gotham-Medium.woff2":[["Gotham-Medium.dcdfe38f.woff2","../fonts/Gotham-Medium.woff2"],"../fonts/Gotham-Medium.woff2"],"./..\\fonts\\Gotham-Medium.woff":[["Gotham-Medium.b074dd9f.woff","../fonts/Gotham-Medium.woff"],"../fonts/Gotham-Medium.woff"],"./..\\fonts\\Gotham-Thin.woff2":[["Gotham-Thin.644b52b8.woff2","../fonts/Gotham-Thin.woff2"],"../fonts/Gotham-Thin.woff2"],"./..\\fonts\\Gotham-Thin.woff":[["Gotham-Thin.cb57ce42.woff","../fonts/Gotham-Thin.woff"],"../fonts/Gotham-Thin.woff"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"all.js":[function(require,module,exports) {
+},{"./..\\fonts\\Ananda.woff2":[["Ananda.4fbbbb31.woff2","../fonts/Ananda.woff2"],"../fonts/Ananda.woff2"],"./..\\fonts\\Ananda.woff":[["Ananda.7f655bf3.woff","../fonts/Ananda.woff"],"../fonts/Ananda.woff"],"./..\\fonts\\AnandaBlack.woff2":[["AnandaBlack.95bd6907.woff2","../fonts/AnandaBlack.woff2"],"../fonts/AnandaBlack.woff2"],"./..\\fonts\\AnandaBlack.woff":[["AnandaBlack.b2b4dd98.woff","../fonts/AnandaBlack.woff"],"../fonts/AnandaBlack.woff"],"./..\\fonts\\Gotham-Bold.woff2":[["Gotham-Bold.81379964.woff2","../fonts/Gotham-Bold.woff2"],"../fonts/Gotham-Bold.woff2"],"./..\\fonts\\Gotham-Bold.woff":[["Gotham-Bold.7f7e1605.woff","../fonts/Gotham-Bold.woff"],"../fonts/Gotham-Bold.woff"],"./..\\fonts\\Gotham-Book.woff2":[["Gotham-Book.e9f96037.woff2","../fonts/Gotham-Book.woff2"],"../fonts/Gotham-Book.woff2"],"./..\\fonts\\Gotham-Book.woff":[["Gotham-Book.9316bc27.woff","../fonts/Gotham-Book.woff"],"../fonts/Gotham-Book.woff"],"./..\\fonts\\Gotham-Medium.woff2":[["Gotham-Medium.dcdfe38f.woff2","../fonts/Gotham-Medium.woff2"],"../fonts/Gotham-Medium.woff2"],"./..\\fonts\\Gotham-Medium.woff":[["Gotham-Medium.b074dd9f.woff","../fonts/Gotham-Medium.woff"],"../fonts/Gotham-Medium.woff"],"./..\\fonts\\Gotham-Thin.woff2":[["Gotham-Thin.644b52b8.woff2","../fonts/Gotham-Thin.woff2"],"../fonts/Gotham-Thin.woff2"],"./..\\fonts\\Gotham-Thin.woff":[["Gotham-Thin.cb57ce42.woff","../fonts/Gotham-Thin.woff"],"../fonts/Gotham-Thin.woff"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/topbar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Topbar =
+/*#__PURE__*/
+function () {
+  function Topbar(element) {
+    _classCallCheck(this, Topbar);
+
+    this.el = document.querySelector(element);
+    this.scrollPos = null;
+    this.contentBounds = null;
+    this.elementBounds = null;
+    this.ticking = false;
+    if (!this.el || this.el === undefined || this.el.length === 0) return;
+    this.init();
+  }
+
+  _createClass(Topbar, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+
+      this.contentBounds = this.getBounds(document.querySelector("#content"));
+      this.elementBounds = this.el.getBoundingClientRect().height;
+
+      this.scrollEventFn = function () {
+        _this.scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (!_this.ticking) {
+          window.requestAnimationFrame(function () {
+            return _this.miniTopbar();
+          });
+        }
+
+        _this.ticking = true;
+      };
+
+      window.addEventListener("scroll", this.scrollEventFn);
+    }
+  }, {
+    key: "getBounds",
+    value: function getBounds(element) {
+      return element.getBoundingClientRect().y + window.scrollY || window.pageYOffset;
+    }
+  }, {
+    key: "miniTopbar",
+    value: function miniTopbar() {
+      if (this.scrollPos >= this.contentBounds - (this.elementBounds + 40)) {
+        if (!this.el.classList.contains("is-mini")) {
+          this.el.classList.add("is-mini");
+        }
+      } else {
+        if (this.el.classList.contains("is-mini")) {
+          this.el.classList.remove("is-mini");
+        }
+      }
+
+      this.ticking = false;
+    }
+  }]);
+
+  return Topbar;
+}();
+
+var _default = Topbar;
+exports.default = _default;
+},{}],"all.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/main.scss");
 
+var _topbar = _interopRequireDefault(require("./components/topbar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //Import main stylesheet to compile it.
-jQuery(document).ready(function ($) {// Your JavaScript goes here
+document.addEventListener("DOMContentLoaded", function () {
+  /**
+   * Site topbar settings. Handles scroll events and menu triggers.
+   * @params {String} topbar - class/id of site topbar.
+   */
+  var topbar = new _topbar.default("#top-bar");
 });
-},{"../scss/main.scss":"../scss/main.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../scss/main.scss":"../scss/main.scss","./components/topbar":"components/topbar.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -211,7 +298,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51905" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50253" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

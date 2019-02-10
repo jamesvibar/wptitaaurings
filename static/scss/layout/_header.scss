@@ -5,16 +5,38 @@
   color: _palette(whitelink);
   position: relative;
 
-  .top-bar-container {
-    padding: 1.5em 3em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  #top-bar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: _layers(sitenav);
+    transition: background ease 400ms;
+
+    &.is-mini {
+      background: #000;
+
+      .top-bar-container {
+        transform: translate3d(0, 0, 0);
+      }
+
+      #site-logo {
+        top: 0.5em;
+        .custom-logo {
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+
+  .top-bar-container {
+    padding: 0.25em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transform: translate3d(0, 1em, 0);
+    transition: transform ease-in-out 300ms;
   }
 
   .top-bar__contact {
@@ -25,11 +47,13 @@
 
   #site-logo {
     position: absolute;
-    top: 2em;
+    top: 0.75em;
     left: 50%;
     transform: translateX(-50%);
+    transition: top ease-in-out 300ms;
 
     .custom-logo {
+      transition: transform ease 400ms;
       max-width: 200px;
     }
   }

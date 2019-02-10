@@ -9,4 +9,9 @@
   .footer-bottom {
     border-top: 1px solid _palette(whitelink);
   }
+
+  .footer_link {
+    text-decoration: none;
+    color: _palette(whitelink);
+  }
 }
