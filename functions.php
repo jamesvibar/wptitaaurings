@@ -46,6 +46,7 @@ class TitaAurings extends Timber\Site {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action( 'init', array( $this, 'register_custom_customizer' ) );
 		parent::__construct();
 	}
 
@@ -68,12 +69,17 @@ class TitaAurings extends Timber\Site {
 		require("lib/menus.php");
 	}
 
+	public function register_custom_customizer() {
+		require("lib/customizer.php");
+	}
+
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
 		$context['menu'] = new Timber\Menu('primary_menu');
+		$context['quick_links'] = new Timber\Menu('footer_menu');
 		$context['logo'] = get_custom_logo();
 		$context['footer_bg'] = get_template_directory_uri() . '/static/images/footer-bg.jpg';
 		$context['site'] = $this;

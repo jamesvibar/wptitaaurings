@@ -1,5 +1,8 @@
 #site-footer {
   color: _palette(whitelink);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   .footer-top .container,
   .footer-bottom .container {
@@ -8,6 +11,8 @@
 
   .footer-bottom {
     border-top: 1px solid _palette(whitelink);
+    font-weight: 500;
+    font-size: 0.9em;
   }
 
   .footer_link {

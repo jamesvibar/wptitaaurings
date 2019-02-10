@@ -13,7 +13,6 @@ $post = new Timber\Post();
 if ( isset($post->header_image) && strlen($post->header_image) ) {
   $post->header_image = new Timber\Image($post->header_image);
 }
-
 // Custom Fields
 $context['header_image'] = $post->header_image;
 $context['contact'] = $post->contact;

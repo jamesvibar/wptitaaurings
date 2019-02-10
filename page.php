@@ -24,4 +24,8 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
+// Custom Fields
+$context['header_image'] = $post->header_image;
+$context['contact'] = $post->contact;
+$context['headline'] = $post->headline;
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

@@ -492,6 +492,7 @@ img {
 #site-header {
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   color: #fff;
   position: relative;
@@ -600,6 +601,9 @@ img {
 
 #site-footer {
   color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #site-footer .footer-top .container,
 #site-footer .footer-bottom .container {
@@ -607,6 +611,8 @@ img {
 }
 #site-footer .footer-bottom {
   border-top: 1px solid #fff;
+  font-weight: 500;
+  font-size: 0.9em;
 }
 #site-footer .footer_link {
   text-decoration: none;

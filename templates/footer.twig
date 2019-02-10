@@ -7,7 +7,7 @@
           images and info
         </div>
         <div class="col-auto">
-          quicklinks
+          {% include "/navs/quicklinks.twig" with { menu: quick_links.get_items, menu_title: quick_links.name } %}
         </div>
         <div class="col-md-5">
           googlemap widget

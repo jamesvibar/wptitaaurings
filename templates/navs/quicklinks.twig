@@ -1,0 +1,12 @@
+{% if menu %}
+<nav class="footer-links-container">
+  <h3 class="footer_links__title">
+  {{ menu_title }}
+  </h3>
+  <ul class="footer_links">
+    {% for item in menu %}
+      <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
