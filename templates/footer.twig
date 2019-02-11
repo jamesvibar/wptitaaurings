@@ -2,15 +2,30 @@
 
   <div class="footer-top">
     <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-md-3">
-          images and info
+      <div class="row footer-top__main">
+        <div class="footer-top__main__container col-lg-4 col-md-12">
+          <div class="footer-top__main__info .col-auto">
+            <img class="footer__logo" src="{{ theme.link | e("esc_url") | relative }}/static/images/logo-icon.png">
+            <p>The Queen of Chicken Wings in Cavite</p>
+            <ul>
+              <li><i class="fa fas fa-map-marker-alt mr-2"></i> 24 Sotto St., General Trias, Cavite</li>
+              <li><i class="fa fas fa-envelope mr-2"></i>ordernow@titaaurings.com.ph</li>
+              <li><i class="fa fas fa-phone mr-2"></i>(+63) 905 669 5251</li>
+              <li><i class="fa fab fa-facebook-messenger mr-2"></i>m.me/titaaurings</li>
+            </ul>
+            </div>
         </div>
         <div class="col-auto">
-          {% include "/navs/quicklinks.twig" with { menu: quick_links.get_items, menu_title: quick_links.name } %}
+          <div class="row footer_dynamic-sidebar">
+            {{ dynamic_sidebar }}
+          </div>
         </div>
         <div class="col-md-5">
-          googlemap widget
+          <h3 class="footer_links__title">
+            Location Map
+          </h3>
+          <div id="map"></div>
+          <a class="footer_get-directions" href="#">Get Directions</a>
         </div>
       </div>
     </div>

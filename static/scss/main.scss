@@ -9,13 +9,17 @@
 @import "./base/normalize";
 @import "./base/general";
 
+// Vendors
+@import "~bootstrap/scss/bootstrap-grid";
+@import "./vendors/fontawesome/fontawesome";
+@import "./vendors/fontawesome/solid";
+@import "./vendors/fontawesome/brands";
+
 // Components
 @import "./components/buttons";
+@import "./components/map";
 
 // Layouts
 @import "./layout/header";
 @import "./layout/navigation";
 @import "./layout/footer";
-
-// Vendors
-@import "~bootstrap/scss/bootstrap-grid";

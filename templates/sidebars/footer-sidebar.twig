@@ -1,0 +1,11 @@
+{% include "/navs/quicklinks.twig" with { menu: quick_links.get_items, menu_title: quick_links.name } %}
+<div class="footer-links-container">
+  <h3 class="footer_links__title">
+  Get Connected
+  </h3>
+  <ul class="footer_links">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+  </ul>
+</div>
+{{ function('dynamic_sidebar', 'footer-1') }}

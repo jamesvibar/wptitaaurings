@@ -4,9 +4,145 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  font-size: 0.9em;
+  line-height: 1.75em;
+
+  .footer-top__main {
+    justify-content: space-around;
+
+    .footer_dynamic-sidebar {
+      flex-direction: column;
+      @include mq($from: mobile, $until: desktop) {
+        flex-direction: row;
+
+        .footer-links-container {
+          margin: 0 1.5em;
+        }
+      }
+    }
+
+    @include mq($from: mobile, $until: desktop) {
+      justify-content: center;
+
+      .footer-top__main__info {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .footer_get-directions {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 0.25em;
+    margin-right: 0.25em;
+  }
+
+  h3.footer_links__title {
+    font-weight: 500;
+    font-size: 1.3em;
+  }
+
+  a {
+    color: _palette(whitelink);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1em 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .icon {
+    position: relative;
+
+    @include mq($from: mobile, $until: desktop) {
+      display: inline;
+    }
+
+    &::after {
+      @extend %fa-icon;
+      content: fa-content($fa-var-twitter);
+    }
+
+    &.left {
+      margin-left: 2em;
+      @include mq($from: mobile, $until: desktop) {
+        margin-left: 1.5em;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: -2em;
+        transform: translateY(-50%);
+
+        @include mq($from: mobile, $until: desktop) {
+          left: -1.5em;
+        }
+      }
+    }
+
+    &.right {
+      margin-right: 2em;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -2em;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.facebook::after {
+      @extend .fab;
+      content: fa-content($fa-var-facebook-f);
+    }
+    &.instagram::after {
+      @extend .fab;
+      content: fa-content($fa-var-instagram);
+    }
+    &.map-marker-alt::after {
+      @extend .fas;
+      content: fa-content($fa-var-map-marker-alt);
+    }
+    &.envelope::after {
+      @extend .fas;
+      content: fa-content($fa-var-envelope);
+    }
+    &.phone::after {
+      @extend .fas;
+      content: fa-content($fa-var-phone);
+    }
+    &.facebook-messenger::after {
+      @extend .fab;
+      content: fa-content($fa-var-facebook-messenger);
+    }
+  }
+
   .footer-top .container,
   .footer-bottom .container {
     padding: 2em;
+  }
+
+  .footer-top {
+    .footer__logo {
+      max-width: 120px;
+
+      @include mq($from: mobile, $until: desktop) {
+        margin: 0 auto;
+      }
+    }
   }
 
   .footer-bottom {

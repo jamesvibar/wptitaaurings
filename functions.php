@@ -46,7 +46,8 @@ class TitaAurings extends Timber\Site {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		add_action( 'init', array( $this, 'register_custom_customizer' ) );
+		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
+		// add_action( 'init', array( $this, 'register_custom_customizer' ) );
 		parent::__construct();
 	}
 
@@ -65,6 +66,18 @@ class TitaAurings extends Timber\Site {
 
 	}
 
+	public function register_sidebars() {
+		register_sidebar( array(
+			'name' => __('Footer Widgets', 'wptitaaurings'),
+			'id' => 'footer1',
+			'description' =>  __('Widgets in this area will be shown in all posts and pages', 'wptitaaurings'),
+			'before_widget' => '<div id="%1$s" class="footer-links-container %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="footer_links__title">',
+			'after_title' => '</h3>'
+		));
+	}
+
 	public function register_menus() {
 		require("lib/menus.php");
 	}
@@ -79,7 +92,7 @@ class TitaAurings extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		$context['menu'] = new Timber\Menu('primary_menu');
-		$context['quick_links'] = new Timber\Menu('footer_menu');
+		$context['footer_sidebar'] = Timber::get_widgets('footer1');
 		$context['logo'] = get_custom_logo();
 		$context['footer_bg'] = get_template_directory_uri() . '/static/images/footer-bg.jpg';
 		$context['site'] = $this;
@@ -141,6 +154,8 @@ class TitaAurings extends Timber\Site {
 		 * See: https://developer.wordpress.org/themes/functionality/custom-logo/
 		 */
 		add_theme_support('custom-logo');
+
+		add_theme_support('widgets');
 		add_theme_support( 'menus' );
 	}
 
