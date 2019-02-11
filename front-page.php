@@ -14,8 +14,10 @@ if ( isset($post->header_image) && strlen($post->header_image) ) {
   $post->header_image = new Timber\Image($post->header_image);
 }
 
-$context['dynamic_sidebar'] = Timber::get_widgets('footer1');
+$context['post'] = $post;
+
 // Custom Fields
+$context['section_1'] = $post->meta('section_1');
 $context['header_image'] = $post->header_image;
 $context['contact'] = $post->contact;
 $context['headline'] = $post->headline;

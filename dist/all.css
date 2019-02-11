@@ -10249,6 +10249,8 @@ readers do not read off random characters that represent icons */
   background: #000;
 }
 #site-header #top-bar.is-mini .top-bar-container {
+  height: 60px;
+  line-height: 60px;
   transform: translate3d(0, 0, 0);
 }
 #site-header #top-bar.is-mini #site-logo {
@@ -10269,6 +10271,11 @@ readers do not read off random characters that represent icons */
   color: #fff;
   font-weight: 500;
   font-size: 0.85em;
+}
+@media (max-width: 61.24em) {
+  #site-header .top-bar__contact {
+    display: none;
+  }
 }
 #site-header #site-logo {
   position: absolute;
@@ -10313,6 +10320,11 @@ readers do not read off random characters that represent icons */
   }
 }
 
+@media (max-width: 61.24em) {
+  #navigation {
+    display: none;
+  }
+}
 #navigation ul {
   list-style-type: none;
   padding: 0;
@@ -10452,6 +10464,19 @@ readers do not read off random characters that represent icons */
 #site-footer .footer-bottom .container {
   padding: 2em;
 }
+@media (min-width: 20em) and (max-width: 46.24em) {
+  #site-footer .footer-top .container,
+#site-footer .footer-bottom .container {
+    padding: 1.5em;
+  }
+}
+@media (min-width: 20em) and (max-width: 46.24em) {
+  #site-footer .footer-bottom .container {
+    padding: 0.25em 1.5em;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 #site-footer .footer-top .footer__logo {
   max-width: 120px;
 }
@@ -10468,4 +10493,18 @@ readers do not read off random characters that represent icons */
 #site-footer .footer_link {
   text-decoration: none;
   color: #fff;
+}
+#site-footer .site-copyright {
+  padding: 0;
+}
+@media (min-width: 20em) and (max-width: 46.24em) {
+  #site-footer .site-copyright {
+    font-size: 0.85em;
+    text-align: center;
+  }
+}
+@media (min-width: 20em) and (max-width: 46.24em) {
+  #site-footer .redkite {
+    display: none;
+  }
 }

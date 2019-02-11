@@ -1,4 +1,8 @@
 #navigation {
+  @include mq($until: desktop) {
+    display: none;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;

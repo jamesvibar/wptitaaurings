@@ -18,6 +18,8 @@
       background: #000;
 
       .top-bar-container {
+        height: 60px;
+        line-height: 60px;
         transform: translate3d(0, 0, 0);
       }
 
@@ -44,6 +46,10 @@
     color: _palette(whitelink);
     font-weight: 500;
     font-size: 0.85em;
+
+    @include mq($until: desktop) {
+      display: none;
+    }
   }
 
   #site-logo {

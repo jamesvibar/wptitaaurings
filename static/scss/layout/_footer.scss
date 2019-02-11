@@ -133,6 +133,18 @@
   .footer-top .container,
   .footer-bottom .container {
     padding: 2em;
+
+    @include mq($from: mobile, $until: tablet) {
+      padding: 1.5em;
+    }
+  }
+
+  @include mq($from: mobile, $until: tablet) {
+    .footer-bottom .container {
+      padding: 0.25em 1.5em;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   .footer-top {
@@ -154,5 +166,20 @@
   .footer_link {
     text-decoration: none;
     color: _palette(whitelink);
+  }
+
+  .site-copyright {
+    padding: 0;
+
+    @include mq($from: mobile, $until: tablet) {
+      font-size: 0.85em;
+      text-align: center;
+    }
+  }
+
+  @include mq($from: mobile, $until: tablet) {
+    .redkite {
+      display: none;
+    }
   }
 }

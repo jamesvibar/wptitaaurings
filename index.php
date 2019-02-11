@@ -16,5 +16,6 @@
 $context = Timber::get_context();
 // Get list of blog posts
 $context['posts'] = new Timber\PostQuery();
+
 $templates = array( 'index.twig' );
 Timber::render( $templates, $context );
