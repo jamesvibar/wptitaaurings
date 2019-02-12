@@ -1,0 +1,53 @@
+#foodMenuSlider {
+  .food-item {
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+    width: 24.25%;
+    margin: 0 0.5%;
+    color: _palette(whitelink);
+    padding: 2.5em 1em;
+    text-align: center;
+
+    h3 {
+      font-family: _fonts(headings);
+      font-size: 2em;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+
+  /* no circle */
+  .flickity-button {
+    background: transparent;
+  }
+  /* big previous & next buttons */
+  .flickity-prev-next-button {
+    width: 35px;
+    height: 35px;
+
+    &.next {
+      right: -40px;
+    }
+
+    &.previous {
+      left: -40px;
+    }
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill: #333;
+  }
+  /* hide disabled button */
+  .flickity-button:disabled {
+    display: none;
+  }
+}

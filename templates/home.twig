@@ -1,10 +1,62 @@
 {% extends "base.twig" %}
+
 {% block content %}
 	
-	{{ section_1.textline }}
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-	
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	<section id="entry-section" class="container section">
+		<div class="row align-items-center">
+			<div class="col-lg-4">
+				<h4 class="site_sub-headline">{{ section_1.sub_headline }}</h4>
+				<h2 class="site_headline">
+					{{ section_1.headline }}
+				</h2>
+				<p>
+				{{ section_1.textline }}
+				</p>
+				<a href="#" class="btn btn-primary mt-3">Inquire Now</a>
+			</div >
+
+			<img class="entry__image col-lg-7 ml-auto" src="{{ section_1.image ?: 'http://lorempixel.com/700/400'}}" alt="The Queen of Chicken">
+		</div>
+	</section>
+
+	<section id="food-menu" class="container section">
+		<h4 class="site_sub-headline centered">{{ section_2.sub_headline }}</h4>
+		<h2 class="site_headline centered">
+			{{ section_2.headline }}
+		</h2>
+		<div class="row">
+			<div class="col">			
+				<div id="foodMenuSlider">
+					{% for item in food %}
+					<div class="food-item" style="background-image:url('{{ item.background_image }}')">
+						<h3 class="food-item__title">
+							{{ item.title }}
+						</h3>
+						<p>
+							{{ item.description }}
+						</p>
+						<a href="{{ item.link }}" class="btn btn-transparent mt-3">View All</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about-section" class="container section">
+		<div class="row align-items-center">
+			<div class="col-md-8">
+				<h4 class="site_sub-headline">{{ section_3.sub_headline }}</h4>
+				<h2 class="site_headline">
+					{{ section_3.headline }}
+				</h2>
+				<p>	
+				{{ section_3.textline }}
+				</p>
+			</div >
+
+			<img class="about__image" src="{{ section_3.image ?: 'http://lorempixel.com/700/400'}}" alt="The Queen of Chicken">
+		</div>
+	</section>
+
 {% endblock %}

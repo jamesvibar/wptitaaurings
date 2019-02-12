@@ -6,6 +6,10 @@
   color: _palette(whitelink);
   position: relative;
 
+  &.header--small {
+    height: 75vh;
+  }
+
   #top-bar {
     position: fixed;
     top: 0;

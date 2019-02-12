@@ -1,0 +1,30 @@
+// Site headlines
+
+.site_headline {
+  font-family: _fonts(headings);
+  color: _palette(primary);
+  font-size: 2.2em;
+  margin-top: 0;
+  display: block;
+
+  &.centered {
+    text-align: center;
+  }
+}
+
+.site_sub-headline {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 0;
+  color: #111;
+  &.centered {
+    text-align: center;
+  }
+}
+
+p {
+  line-height: 1.75em;
+  color: lighten(#000, 15%);
+  font-size: 0.95em;
+}

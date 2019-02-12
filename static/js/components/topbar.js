@@ -1,6 +1,6 @@
 class Topbar {
   constructor(element) {
-    this.el = document.querySelector(element);
+    this.el = document.body.querySelector(element);
     this.scrollPos = null;
     this.contentBounds = null;
     this.elementBounds = null;

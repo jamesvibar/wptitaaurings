@@ -1,0 +1,26 @@
+#entry-section {
+  .entry__image {
+    padding: 0;
+    box-shadow: 0px 0px 70px -10px rgba(0, 0, 0, 0.4);
+
+    @include mq($from: mobile, $until: desktop) {
+      margin-top: 2em;
+    }
+  }
+}
+
+#food-menu {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#about-section {
+  position: relative;
+
+  .about__image {
+    position: absolute;
+    width: 550px;
+    top: 25%;
+    right: -15%;
+  }
+}

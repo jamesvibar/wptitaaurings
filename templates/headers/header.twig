@@ -3,7 +3,7 @@
 
 {% set h_role = ' role="' ~ role ~ '"' %}
 
-<header id="site-header"{{ h_role }} style="background-image:url('{% if header_image %}{{ header_image }}{%- else -%}https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940{% endif %}')">
+<header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ header_image }}{%- else -%}https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940{% endif %}')">
   <div class="container">
     {# Site Top Bar #}
     <div id="top-bar" class="row">
@@ -28,8 +28,10 @@
           {%- set headline = post.title -%}
         {%- endif -%}
         <h1 class="hero-main__headline">{{- headline | default('Placeholder') -}}</h1>
-
+        
+        {% if fn('is_front_page') %}
         <a href="#content" class="hero-main__button btn btn-explore" role="button">Explore</a>
+        {% endif %}
     </div>
 
   </div>

@@ -417,12 +417,41 @@ template {
 html,
 body {
   font-family: "Gotham", "Helvetica", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.site_headline {
+  font-family: "Ananda", "Gotham", sans-serif;
+  color: #8e5600;
+  font-size: 2.2em;
+  margin-top: 0;
+  display: block;
+}
+.site_headline.centered {
+  text-align: center;
+}
+
+.site_sub-headline {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 0;
+  color: #111;
+}
+.site_sub-headline.centered {
+  text-align: center;
+}
+
+p {
+  line-height: 1.75em;
+  color: #262626;
+  font-size: 0.95em;
 }
 
 /*!
@@ -4476,6 +4505,151 @@ html {
     margin-left: auto !important;
   }
 }
+/*! Flickity v2.2.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-button ---- */
+.flickity-button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #333;
+}
+
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* vertically center */
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
 .fa,
 .fas,
 #site-footer .icon.phone::after,
@@ -10162,7 +10336,6 @@ readers do not read off random characters that represent icons */
 .btn {
   display: inline-block;
   padding: 1.1em 3em;
-  border: none;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -10222,11 +10395,79 @@ readers do not read off random characters that represent icons */
   background-color: transparent;
   color: #fff;
 }
+.btn.btn-primary {
+  background: #8e5600;
+  color: #fff;
+  border: 1px solid #8e5600;
+  transition: background 200ms ease-in-out, color 250ms ease;
+}
+.btn.btn-primary:hover {
+  background: transparent;
+  color: #8e5600;
+}
+.btn.btn-transparent {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: background 200ms ease-in-out, color 250ms ease;
+}
+.btn.btn-transparent:hover {
+  background: #fff;
+  color: #000;
+}
 
 #map {
   background: #ccc;
   width: 100%;
   height: 200px;
+}
+
+#foodMenuSlider {
+  /* no circle */
+  /* big previous & next buttons */
+  /* icon color */
+  /* hide disabled button */
+}
+#foodMenuSlider .food-item {
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  width: 24.25%;
+  margin: 0 0.5%;
+  color: #fff;
+  padding: 2.5em 1em;
+  text-align: center;
+}
+#foodMenuSlider .food-item h3 {
+  font-family: "Ananda", "Gotham", sans-serif;
+  font-size: 2em;
+  margin-top: 0;
+}
+#foodMenuSlider .food-item p {
+  font-size: 0.9em;
+}
+#foodMenuSlider .food-item h3,
+#foodMenuSlider .food-item p {
+  color: #fff;
+}
+#foodMenuSlider .flickity-button {
+  background: transparent;
+}
+#foodMenuSlider .flickity-prev-next-button {
+  width: 35px;
+  height: 35px;
+}
+#foodMenuSlider .flickity-prev-next-button.next {
+  right: -40px;
+}
+#foodMenuSlider .flickity-prev-next-button.previous {
+  left: -40px;
+}
+#foodMenuSlider .flickity-button-icon {
+  fill: #333;
+}
+#foodMenuSlider .flickity-button:disabled {
+  display: none;
 }
 
 #site-header {
@@ -10236,6 +10477,9 @@ readers do not read off random characters that represent icons */
   height: 100vh;
   color: #fff;
   position: relative;
+}
+#site-header.header--small {
+  height: 75vh;
 }
 #site-header #top-bar {
   position: fixed;
@@ -10344,6 +10588,10 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
   font-weight: 500;
   font-size: 0.85em;
+}
+
+.section {
+  padding: 3em 0;
 }
 
 #site-footer {
@@ -10507,4 +10755,29 @@ readers do not read off random characters that represent icons */
   #site-footer .redkite {
     display: none;
   }
+}
+
+#entry-section .entry__image {
+  padding: 0;
+  box-shadow: 0px 0px 70px -10px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 20em) and (max-width: 61.24em) {
+  #entry-section .entry__image {
+    margin-top: 2em;
+  }
+}
+
+#food-menu {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#about-section {
+  position: relative;
+}
+#about-section .about__image {
+  position: absolute;
+  width: 550px;
+  top: 25%;
+  right: -15%;
 }

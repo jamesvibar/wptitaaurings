@@ -8,9 +8,11 @@
 @import "./base/fonts";
 @import "./base/normalize";
 @import "./base/general";
+@import "./base/typography";
 
 // Vendors
 @import "~bootstrap/scss/bootstrap-grid";
+@import "./vendors/flickity";
 @import "./vendors/fontawesome/fontawesome";
 @import "./vendors/fontawesome/solid";
 @import "./vendors/fontawesome/brands";
@@ -18,8 +20,13 @@
 // Components
 @import "./components/buttons";
 @import "./components/map";
+@import "./components/foodMenuSlider";
 
 // Layouts
 @import "./layout/header";
 @import "./layout/navigation";
+@import "./layout/section";
 @import "./layout/footer";
+
+// Pages
+@import "./pages/home";

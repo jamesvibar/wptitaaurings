@@ -2,7 +2,7 @@ import GoogleMapsLoader from "google-maps";
 
 class Map {
   constructor(el) {
-    this.el = document.querySelector(el);
+    this.el = document.body.querySelector(el);
     this.location = { lat: 14.3862621, lng: 120.8813928 };
     this.key = "AIzaSyCa78isn_mmKpCYexVYgp2_ODCgjJ5nkn4"; //TODO: UNRESTRICTED (Secure API Key before production)
 

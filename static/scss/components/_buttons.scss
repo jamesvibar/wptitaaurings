@@ -1,7 +1,6 @@
 .btn {
   display: inline-block;
   padding: 1.1em 3em;
-  border: none;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -68,6 +67,30 @@
     &:hover {
       background-color: transparent;
       color: _palette(whitelink);
+    }
+  }
+
+  &.btn-primary {
+    background: _palette(primary);
+    color: _palette(whitelink);
+    border: 1px solid _palette(primary);
+    transition: background 200ms ease-in-out, color 250ms ease;
+
+    &:hover {
+      background: transparent;
+      color: _palette(primary);
+    }
+  }
+
+  &.btn-transparent {
+    background: transparent;
+    color: _palette(whitelink);
+    border: 1px solid _palette(whitelink);
+    transition: background 200ms ease-in-out, color 250ms ease;
+
+    &:hover {
+      background: _palette(whitelink);
+      color: _palette(blacklink);
     }
   }
 }

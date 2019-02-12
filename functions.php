@@ -47,6 +47,7 @@ class TitaAurings extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
+		add_action( 'template_redirect', array($this, 'redirect_food_product_post' ));
 		// add_action( 'init', array( $this, 'register_custom_customizer' ) );
 		parent::__construct();
 	}
@@ -59,23 +60,15 @@ class TitaAurings extends Timber\Site {
 
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
-
+		require('lib/post-types.php');
 	}
 	/** This is where you can register custom taxonomies. */
 	public function register_taxonomies() {
-
+		require('lib/taxonomies.php');
 	}
 
 	public function register_sidebars() {
-		register_sidebar( array(
-			'name' => __('Footer Widgets', 'wptitaaurings'),
-			'id' => 'footer1',
-			'description' =>  __('Widgets in this area will be shown in all posts and pages', 'wptitaaurings'),
-			'before_widget' => '<div id="%1$s" class="footer-links-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="footer_links__title">',
-			'after_title' => '</h3>'
-		));
+		require("lib/sidebar.php");
 	}
 
 	public function register_menus() {
@@ -84,6 +77,14 @@ class TitaAurings extends Timber\Site {
 
 	public function register_custom_customizer() {
 		require("lib/customizer.php");
+	}
+
+	public function redirect_food_product_post() {
+		$queried_post_type = get_query_var('post_type');
+		if ( is_single() && 'food_product' ==  $queried_post_type ) {
+			wp_redirect( home_url(), 301 );
+			exit;
+		}
 	}
 
 	/** This is where you add some context
