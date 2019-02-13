@@ -3,10 +3,10 @@
 <nav id="navigation" class="site-nav">
   <ul>
     {% for item in menu %}
-    <li>
+    <li class="{{ item.current ? 'is-active' : ''}}">
       <a href="{{ item.link }}">{{ item.title }}</a>
     </li>
     {% endfor %}
   </ul>
-</nav>
+</nav>  
 {% endif %}

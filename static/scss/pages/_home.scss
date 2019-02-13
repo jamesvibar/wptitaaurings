@@ -1,26 +1,105 @@
-#entry-section {
-  .entry__image {
-    padding: 0;
-    box-shadow: 0px 0px 70px -10px rgba(0, 0, 0, 0.4);
+.home {
+  #entry-section {
+    .entry__image {
+      padding: 0;
+      box-shadow: 0px 0px 70px -10px rgba(0, 0, 0, 0.4);
 
-    @include mq($from: mobile, $until: desktop) {
-      margin-top: 2em;
+      @include mq($from: mobile, $until: desktop) {
+        margin-top: 2em;
+      }
     }
   }
-}
 
-#food-menu {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
+  #food-menu {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
 
-#about-section {
-  position: relative;
+  #about-section {
+    position: relative;
 
-  .about__image {
-    position: absolute;
-    width: 550px;
-    top: 25%;
-    right: -15%;
+    .about__image {
+      position: absolute;
+      width: 550px;
+      top: 25%;
+      right: -15%;
+      z-index: _layers(homechickenbg);
+
+      @include mq($until: tablet) {
+        display: none;
+      }
+      @include mq($from: tablet, $until: desktop) {
+        width: 350px;
+      }
+    }
+  }
+
+  #blog {
+    background: url("../images/home-blog-bg.jpg") center center no-repeat;
+    background-size: cover;
+
+    .blog-item {
+      margin-bottom: 30px;
+
+      @include mq($from: mobile, $until: tablet) {
+        border-bottom: 1px solid #aaa;
+      }
+
+      .blog-container-image {
+        .blog-image {
+          min-width: 130px;
+          min-height: 130px;
+          max-width: 180px;
+          max-height: 180px;
+
+          display: block;
+
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+
+          @include mq($from: mobile, $until: tablet) {
+            min-width: 100%;
+            margin-bottom: 1.5em;
+          }
+        }
+      }
+
+      .blog-content {
+        padding-left: 1.5em;
+      }
+
+      .date {
+        font-size: 0.8em;
+      }
+
+      .title {
+        margin-top: 0.25em;
+        font-size: 1.25em;
+        font-weight: 450;
+      }
+
+      .content {
+        font-size: 0.88em;
+        color: #333;
+        line-height: 1.75em;
+      }
+
+      .read-more {
+        margin-top: 2em;
+        display: inline-block;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 12px;
+        transition: transform 200ms ease;
+        color: #000;
+
+        &:hover {
+          transform: translateX(6%);
+        }
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@
 
 {% set h_role = ' role="' ~ role ~ '"' %}
 
-<header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ header_image }}{%- else -%}https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940{% endif %}')">
+<header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ Image(header_image).src }}{%- else -%}http://localhost:3000/wp-content/uploads/2019/02/home_image-1024x616.jpg{% endif %}')">
   <div class="container">
     {# Site Top Bar #}
     <div id="top-bar" class="row">
@@ -24,10 +24,14 @@
     <div class="hero-main">
         {%- if headline -%}
           {%- set headline = headline -%}
+        {%- elseif post.title -%}
+          {%- set headline = post.title -%}
+        {%- elseif term_page.name -%}
+          {%- set headline = term_page.name -%}
         {%- else -%}
           {%- set headline = post.title -%}
         {%- endif -%}
-        <h1 class="hero-main__headline">{{- headline | default('Placeholder') -}}</h1>
+        <h1 class="hero-main__headline">{{- headline -}}</h1>
         
         {% if fn('is_front_page') %}
         <a href="#content" class="hero-main__button btn btn-explore" role="button">Explore</a>

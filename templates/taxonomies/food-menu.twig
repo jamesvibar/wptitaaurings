@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div id="food-menu" class="container section">
+      {% if term_page.count > 0 %}
+          {% for item in term_page.posts %}
+            <div class="food-menu__item" style="background-image: url('{{ Image(item.food_image).src }}')">
+              <h3 class="food-menu__item-title">
+                {{ item.title }}
+              </h3>
+            </div>
+          {% endfor %}
+      {% else %}
+      <div class="row">
+          <h2 class="text-center">There are no products in here.</h2>
+      </div>
+      {% endif %}
+  </div>
+{% endblock %}

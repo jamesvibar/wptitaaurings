@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Ananda.woff2":[["Ananda.4fbbbb31.woff2","../fonts/Ananda.woff2"],"../fonts/Ananda.woff2"],"./..\\fonts\\Ananda.woff":[["Ananda.7f655bf3.woff","../fonts/Ananda.woff"],"../fonts/Ananda.woff"],"./..\\fonts\\AnandaBlack.woff2":[["AnandaBlack.95bd6907.woff2","../fonts/AnandaBlack.woff2"],"../fonts/AnandaBlack.woff2"],"./..\\fonts\\AnandaBlack.woff":[["AnandaBlack.b2b4dd98.woff","../fonts/AnandaBlack.woff"],"../fonts/AnandaBlack.woff"],"./..\\fonts\\Gotham-Bold.woff2":[["Gotham-Bold.81379964.woff2","../fonts/Gotham-Bold.woff2"],"../fonts/Gotham-Bold.woff2"],"./..\\fonts\\Gotham-Bold.woff":[["Gotham-Bold.7f7e1605.woff","../fonts/Gotham-Bold.woff"],"../fonts/Gotham-Bold.woff"],"./..\\fonts\\Gotham-Book.woff2":[["Gotham-Book.e9f96037.woff2","../fonts/Gotham-Book.woff2"],"../fonts/Gotham-Book.woff2"],"./..\\fonts\\Gotham-Book.woff":[["Gotham-Book.9316bc27.woff","../fonts/Gotham-Book.woff"],"../fonts/Gotham-Book.woff"],"./..\\fonts\\Gotham-Medium.woff2":[["Gotham-Medium.dcdfe38f.woff2","../fonts/Gotham-Medium.woff2"],"../fonts/Gotham-Medium.woff2"],"./..\\fonts\\Gotham-Medium.woff":[["Gotham-Medium.b074dd9f.woff","../fonts/Gotham-Medium.woff"],"../fonts/Gotham-Medium.woff"],"./..\\fonts\\Gotham-Thin.woff2":[["Gotham-Thin.644b52b8.woff2","../fonts/Gotham-Thin.woff2"],"../fonts/Gotham-Thin.woff2"],"./..\\fonts\\Gotham-Thin.woff":[["Gotham-Thin.cb57ce42.woff","../fonts/Gotham-Thin.woff"],"../fonts/Gotham-Thin.woff"],"./..\\fonts\\fa-solid-900.eot":[["fa-solid-900.2aa7f73c.eot","../fonts/fa-solid-900.eot"],"../fonts/fa-solid-900.eot"],"./..\\fonts\\fa-solid-900.woff2":[["fa-solid-900.50052ebc.woff2","../fonts/fa-solid-900.woff2"],"../fonts/fa-solid-900.woff2"],"./..\\fonts\\fa-solid-900.woff":[["fa-solid-900.9e5696f5.woff","../fonts/fa-solid-900.woff"],"../fonts/fa-solid-900.woff"],"./..\\fonts\\fa-solid-900.ttf":[["fa-solid-900.16dc6129.ttf","../fonts/fa-solid-900.ttf"],"../fonts/fa-solid-900.ttf"],"./..\\fonts\\fa-solid-900.svg":[["fa-solid-900.ab242033.svg","../fonts/fa-solid-900.svg"],"../fonts/fa-solid-900.svg"],"./..\\fonts\\fa-brands-400.eot":[["fa-brands-400.5a0cf9bb.eot","../fonts/fa-brands-400.eot"],"../fonts/fa-brands-400.eot"],"./..\\fonts\\fa-brands-400.woff2":[["fa-brands-400.0443b8c8.woff2","../fonts/fa-brands-400.woff2"],"../fonts/fa-brands-400.woff2"],"./..\\fonts\\fa-brands-400.woff":[["fa-brands-400.f5430110.woff","../fonts/fa-brands-400.woff"],"../fonts/fa-brands-400.woff"],"./..\\fonts\\fa-brands-400.ttf":[["fa-brands-400.ab00d996.ttf","../fonts/fa-brands-400.ttf"],"../fonts/fa-brands-400.ttf"],"./..\\fonts\\fa-brands-400.svg":[["fa-brands-400.c3b99f20.svg","../fonts/fa-brands-400.svg"],"../fonts/fa-brands-400.svg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/topbar.js":[function(require,module,exports) {
+},{"./..\\fonts\\Ananda.woff2":[["Ananda.4fbbbb31.woff2","../fonts/Ananda.woff2"],"../fonts/Ananda.woff2"],"./..\\fonts\\Ananda.woff":[["Ananda.7f655bf3.woff","../fonts/Ananda.woff"],"../fonts/Ananda.woff"],"./..\\fonts\\AnandaBlack.woff2":[["AnandaBlack.95bd6907.woff2","../fonts/AnandaBlack.woff2"],"../fonts/AnandaBlack.woff2"],"./..\\fonts\\AnandaBlack.woff":[["AnandaBlack.b2b4dd98.woff","../fonts/AnandaBlack.woff"],"../fonts/AnandaBlack.woff"],"./..\\fonts\\Gotham-Bold.woff2":[["Gotham-Bold.81379964.woff2","../fonts/Gotham-Bold.woff2"],"../fonts/Gotham-Bold.woff2"],"./..\\fonts\\Gotham-Bold.woff":[["Gotham-Bold.7f7e1605.woff","../fonts/Gotham-Bold.woff"],"../fonts/Gotham-Bold.woff"],"./..\\fonts\\Gotham-Book.woff2":[["Gotham-Book.e9f96037.woff2","../fonts/Gotham-Book.woff2"],"../fonts/Gotham-Book.woff2"],"./..\\fonts\\Gotham-Book.woff":[["Gotham-Book.9316bc27.woff","../fonts/Gotham-Book.woff"],"../fonts/Gotham-Book.woff"],"./..\\fonts\\Gotham-Medium.woff2":[["Gotham-Medium.dcdfe38f.woff2","../fonts/Gotham-Medium.woff2"],"../fonts/Gotham-Medium.woff2"],"./..\\fonts\\Gotham-Medium.woff":[["Gotham-Medium.b074dd9f.woff","../fonts/Gotham-Medium.woff"],"../fonts/Gotham-Medium.woff"],"./..\\fonts\\Gotham-Thin.woff2":[["Gotham-Thin.644b52b8.woff2","../fonts/Gotham-Thin.woff2"],"../fonts/Gotham-Thin.woff2"],"./..\\fonts\\Gotham-Thin.woff":[["Gotham-Thin.cb57ce42.woff","../fonts/Gotham-Thin.woff"],"../fonts/Gotham-Thin.woff"],"./..\\fonts\\fa-solid-900.eot":[["fa-solid-900.2aa7f73c.eot","../fonts/fa-solid-900.eot"],"../fonts/fa-solid-900.eot"],"./..\\fonts\\fa-solid-900.woff2":[["fa-solid-900.50052ebc.woff2","../fonts/fa-solid-900.woff2"],"../fonts/fa-solid-900.woff2"],"./..\\fonts\\fa-solid-900.woff":[["fa-solid-900.9e5696f5.woff","../fonts/fa-solid-900.woff"],"../fonts/fa-solid-900.woff"],"./..\\fonts\\fa-solid-900.ttf":[["fa-solid-900.16dc6129.ttf","../fonts/fa-solid-900.ttf"],"../fonts/fa-solid-900.ttf"],"./..\\fonts\\fa-solid-900.svg":[["fa-solid-900.ab242033.svg","../fonts/fa-solid-900.svg"],"../fonts/fa-solid-900.svg"],"./..\\fonts\\fa-brands-400.eot":[["fa-brands-400.5a0cf9bb.eot","../fonts/fa-brands-400.eot"],"../fonts/fa-brands-400.eot"],"./..\\fonts\\fa-brands-400.woff2":[["fa-brands-400.0443b8c8.woff2","../fonts/fa-brands-400.woff2"],"../fonts/fa-brands-400.woff2"],"./..\\fonts\\fa-brands-400.woff":[["fa-brands-400.f5430110.woff","../fonts/fa-brands-400.woff"],"../fonts/fa-brands-400.woff"],"./..\\fonts\\fa-brands-400.ttf":[["fa-brands-400.ab00d996.ttf","../fonts/fa-brands-400.ttf"],"../fonts/fa-brands-400.ttf"],"./..\\fonts\\fa-brands-400.svg":[["fa-brands-400.c3b99f20.svg","../fonts/fa-brands-400.svg"],"../fonts/fa-brands-400.svg"],"./..\\images\\home-blog-bg.jpg":[["home-blog-bg.25d8b318.jpg","../images/home-blog-bg.jpg"],"../images/home-blog-bg.jpg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/topbar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4433,6 +4433,20 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+_flickity.default.prototype._createResizeClass = function () {
+  this.element.classList.add("flickity-resize");
+};
+
+_flickity.default.createMethods.push("_createResizeClass");
+
+var resize = _flickity.default.prototype.resize;
+
+_flickity.default.prototype.resize = function () {
+  this.element.classList.remove("flickity-resize");
+  resize.call(this);
+  this.element.classList.add("flickity-resize");
+};
+
 var FoodMenuSlider =
 /*#__PURE__*/
 function () {
@@ -4521,7 +4535,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59392" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

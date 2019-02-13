@@ -3,11 +3,22 @@
     background-size: cover;
     background-repeat: none;
     background-position: center center;
-    width: 24.25%;
-    margin: 0 0.5%;
+    width: 25%;
     color: _palette(whitelink);
     padding: 2.5em 1em;
     text-align: center;
+    box-sizing: border-box;
+    border-right: 10px solid #fff;
+    border-left: 10px solid #fff;
+    background-clip: padding-box;
+
+    @include mq($from: tablet, $until: desktop) {
+      width: 33.33%;
+    }
+
+    @include mq($from: mobile, $until: tablet) {
+      width: 100%;
+    }
 
     h3 {
       font-family: _fonts(headings);
@@ -50,4 +61,8 @@
   .flickity-button:disabled {
     display: none;
   }
+}
+
+.flickity-resize .food-item {
+  min-height: 100%;
 }

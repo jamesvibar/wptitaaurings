@@ -1,0 +1,36 @@
+.post-type-archive-food_product {
+  #food-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    .food-menu__item {
+      padding: 1.5em;
+      width: 23%;
+      margin: 1%;
+      color: _palette(whitelink);
+      height: 200px;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mq($from: tablet, $until: desktop) {
+        width: 31.33%;
+      }
+
+      @include mq($from: mobile, $until: tablet) {
+        width: 48%;
+      }
+
+      .food-menu__item-title {
+        font-size: 1.15em;
+        text-transform: uppercase;
+        font-weight: 450;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -11,6 +11,10 @@
     li {
       display: block;
       transition: transform 200ms ease-in-out;
+      &.is-active > a {
+        color: _palette(whitelink);
+      }
+
       &:hover {
         transform: scale(1.1);
       }
@@ -18,7 +22,7 @@
       & > a {
         padding: 0.4em 0.4em;
         margin-right: 0.3em;
-        color: _palette(whitelink);
+        color: darken(_palette(whitelink), 30%);
         text-decoration: none;
         font-weight: 500;
         font-size: 0.85em;
