@@ -3,7 +3,7 @@
 
 {% set h_role = ' role="' ~ role ~ '"' %}
 
-<header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ Image(header_image).src }}{%- else -%}{{ theme.link | e("esc_url") | relative }}/wp-content/uploads/2019/02/home_image-1024x616.jpg{% endif %}')">
+<header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ Image(header_image).src }}{%- else -%}{{ theme.link | e("esc_url") | relative }}/static/images/home_image.jpg{% endif %}')">
   <div class="container">
     {# Site Top Bar #}
     <div id="top-bar" class="row">
