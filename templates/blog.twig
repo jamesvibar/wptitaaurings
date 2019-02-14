@@ -1,44 +1,26 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div id="blog" class="container section">
-    <div class="row">
-      {% for post in posts %}
-      <div class="col-md-4">
-        <div class="blog-item">
-          {% if post.thumbnail.src %}
-          <div class="blog-item__thumbnail" style="background-image: url('{{ post.thumbnail.src }}');"><a class="blog-item__thumbnail-link" href="{{ post.link }}"></a></div>
-          {% endif %}
-          <div class="blog-item-content">
-            <span class="date">{{ post.date | date('M j, Y')}}</span>
-            <h3 class="title">{{ post.title }}</h3>
-            <p>
-            {{ post.preview.length(15).read_more('<div>Read More &rsaquo;</div>') }}
-            </p>
-          </div>
+<div id="blog" class="container section">
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-md-4">
+      <div class="blog-item">
+        {% if post.thumbnail.src %}
+        <div class="blog-item__thumbnail" style="background-image: url('{{ post.thumbnail.src }}');"><a class="blog-item__thumbnail-link" href="{{ post.link }}"></a></div>
+        {% endif %}
+        <div class="blog-item-content">
+          <span class="date">{{ post.date | date('M j, Y')}}</span>
+          <h3 class="title">{{ post.title }}</h3>
+          <p>
+          {{ post.preview.length(15).read_more('<div>Read More &rsaquo;</div>') }}
+          </p>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 
-  <div class="tool-pagination">
-    {% if posts.pagination.prev %}
-        <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
-    {% endif %}
-    <ul class="pages">
-        {% for page in posts.pagination.pages %}
-            <li>
-                {% if page.link %}
-                    <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
-                {% else %}
-                    <span class="{{page.class}}">{{page.title}}</span>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-    {% if posts.pagination.next %}
-        <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
-    {% endif %}
+  {% include "navs/blog-pagination.twig" %}
 </div>
 {% endblock %}

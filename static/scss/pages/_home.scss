@@ -37,6 +37,7 @@
   #blog {
     background: url("../images/home-blog-bg.jpg") center center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 
     .blog-item {
       margin-bottom: 30px;

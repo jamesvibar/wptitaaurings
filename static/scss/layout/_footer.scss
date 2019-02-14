@@ -10,6 +10,10 @@
   .footer-top__main {
     justify-content: space-around;
 
+    p {
+      color: #fff;
+    }
+
     .footer_dynamic-sidebar {
       flex-direction: column;
       @include mq($from: mobile, $until: desktop) {

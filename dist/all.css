@@ -426,6 +426,13 @@ img {
   height: auto;
 }
 
+input,
+textarea {
+  padding: 1em;
+  font-size: 0.9em;
+  border: 1px solid #b4b4b4;
+}
+
 .site_headline {
   font-family: "Ananda", "Gotham", sans-serif;
   color: #8e5600;
@@ -10487,6 +10494,33 @@ readers do not read off random characters that represent icons */
   min-height: 100%;
 }
 
+#pagination .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#pagination .pagination .pagination-pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+#pagination .pagination a {
+  padding: 1em;
+  text-decoration: none;
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 0.88em;
+  font-weight: 450;
+}
+#pagination .pagination a:hover {
+  color: #000;
+}
+#pagination .pagination a.current {
+  color: #8e5600;
+}
+
 #site-header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -10624,6 +10658,9 @@ readers do not read off random characters that represent icons */
 }
 #site-footer .footer-top__main {
   justify-content: space-around;
+}
+#site-footer .footer-top__main p {
+  color: #fff;
 }
 #site-footer .footer-top__main .footer_dynamic-sidebar {
   flex-direction: column;
@@ -10813,6 +10850,7 @@ readers do not read off random characters that represent icons */
 .home #blog {
   background: url("home-blog-bg.25d8b318.jpg") center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 .home #blog .blog-item {
   margin-bottom: 30px;
@@ -10925,6 +10963,120 @@ readers do not read off random characters that represent icons */
 }
 .blog #blog .blog-item .blog-item-content .read-more:hover {
   transform: translateX(6%);
+}
+
+#single .single-title {
+  font-size: 1.5em;
+}
+#single .single-body p {
+  line-height: 2em;
+  font-size: 0.98em;
+}
+#single .single-body blockquote {
+  padding-left: 2em;
+  border-left: 3px solid #ccc;
+  font-size: 0.9em;
+}
+#single .single-body ul li,
+#single .single-body ol li {
+  margin: 0 0.5em;
+}
+#single .single-body img {
+  margin-bottom: 1.5em;
+}
+#single .single-body img.aligncenter {
+  margin: 0 auto;
+}
+#single .single-body img.alignright {
+  float: right;
+  margin: 1em;
+}
+@media (max-width: 46.24em) {
+  #single .single-links-container {
+    margin-top: 3em;
+  }
+}
+#single .single-links-container .title {
+  margin-bottom: 1em;
+  font-family: "Ananda", "Gotham", sans-serif;
+  font-size: 1.25em;
+  padding: 18px 32px;
+  color: #fff;
+  display: block;
+}
+#single .single-links-container ul li {
+  list-style-type: none;
+}
+#single .single-links-container .single-links {
+  padding: 0;
+  margin: 0;
+}
+#single .single-links-container .title,
+#single .single-links-container .single-link {
+  background: #212121;
+  display: block;
+  border-top: 1px solid #fff;
+}
+#single .single-links-container .single-link {
+  transition: background 200ms ease-in-out;
+}
+#single .single-links-container .single-link:hover {
+  background: #8e5600;
+}
+#single .single-links-container .single-link:hover a {
+  transform: translateX(6px);
+}
+#single .single-links-container .single-link:hover a i.fa-angle-right {
+  opacity: 1;
+}
+#single .single-links-container .single-link.current {
+  background: #212121;
+}
+#single .single-links-container .single-link.current a {
+  margin: 0;
+}
+#single .single-links-container .single-link.current i.fa-angle-right {
+  opacity: 1;
+}
+#single .single-links-container .single-link a,
+#single .single-links-container .single-link span {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 32px;
+  color: #fff;
+  display: block;
+  margin-left: -9px;
+  transition: transform 200ms ease-in-out;
+}
+#single .single-links-container .single-link a i.fa-angle-right,
+#single .single-links-container .single-link span i.fa-angle-right {
+  margin-right: 6px;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+@media (max-width: 46.24em) {
+  #contact .contact-main {
+    margin: 0 auto;
+  }
+}
+#contact .contact-main .contact__logo {
+  max-width: 300px;
+  margin-bottom: 3em;
+}
+#contact .contact-main .contact-main-container {
+  text-align: center;
+}
+#contact .contact-main .contact-social {
+  padding: 0;
+  list-style-type: none;
+}
+#contact .contact-main .contact-social li {
+  margin-bottom: 1em;
+}
+#contact .contact-main .contact-social i {
+  color: #8e5600;
 }
 
 .tax-food-menu #food-menu {

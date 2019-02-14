@@ -1,0 +1,29 @@
+#contact {
+  .contact-main {
+    @include mq($until: tablet) {
+      margin: 0 auto;
+    }
+
+    .contact__logo {
+      max-width: 300px;
+      margin-bottom: 3em;
+    }
+
+    .contact-main-container {
+      text-align: center;
+    }
+
+    .contact-social {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 1em;
+      }
+
+      i {
+        color: _palette(primary);
+      }
+    }
+  }
+}

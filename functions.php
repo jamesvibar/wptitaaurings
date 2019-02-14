@@ -48,6 +48,7 @@ class TitaAurings extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
 		add_action( 'template_redirect', array($this, 'redirect_food_product_post' ));
+		// add_action( 'pre_get_posts', array($this, 'my_home_query') );
 		// add_action( 'init', array( $this, 'register_custom_customizer' ) );
 		parent::__construct();
 	}
@@ -93,10 +94,13 @@ class TitaAurings extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		$context['menu'] = new Timber\Menu('primary_menu');
-		$context['footer_sidebar'] = Timber::get_widgets('footer1');
 		$context['logo'] = get_custom_logo();
+
+		// Footer Variables
 		$context['dynamic_sidebar'] = Timber::get_widgets('footer1');
 		$context['footer_bg'] = get_template_directory_uri() . '/static/images/footer-bg.jpg';
+
+		// Allows you to access site variables like site name or description.
 		$context['site'] = $this;
 		return $context;
 	}
@@ -178,6 +182,12 @@ class TitaAurings extends Timber\Site {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter( new Twig_SimpleFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 		return $twig;
+	}
+
+	function my_home_query( $query ) {
+		if(!is_admin() && $query->is_main_query()) {
+			$query->set('posts_per_page', '1');
+	}
 	}
 
 }

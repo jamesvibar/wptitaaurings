@@ -23,6 +23,11 @@
       </div>
       {% endfor %}
     </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a href="{{ function('get_post_type_archive_link', 'post') }}" class="btn btn-primary">View All Blogs</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endif %}

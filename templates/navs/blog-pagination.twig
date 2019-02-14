@@ -1,0 +1,30 @@
+<div id="pagination" class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <div class="pagination">
+        {% if posts.pagination.prev %}
+        <a href="{{ posts.pagination.prev.link }}" class="pagination-prev-next">
+          Prev
+        </a>
+        {% endif %}
+        
+        <ul class="pagination-pages">
+          {% for page in posts.pagination.pages %}
+          <li>
+            <a href="{{ page.link }}" class="pagination-page {{page.class}}">{{ page.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        {% if posts.pagination.next %}
+        <a href="{{ posts.pagination.next.link }}" class="pagination-prev-next">
+          Next
+        </a>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+
+</div>
