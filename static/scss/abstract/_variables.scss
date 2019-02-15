@@ -1,5 +1,6 @@
 $mq-breakpoints: (
   mobile: 320px,
+  mobilelg: 520px,
   tablet: 740px,
   desktop: 980px,
   wide: 1300px
@@ -32,5 +33,13 @@ $palette: (
 
 $layers: (
   sitenav: 10,
-  homechickenbg: -1
+  homechickenbg: -1,
+  menumobile: 11,
+  hamburger: 12
 );
+
+// Hamburger Styles
+$hamburger-layer-color: #fff;
+$hamburger-layer-width: 30px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 6px;

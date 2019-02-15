@@ -1,0 +1,16 @@
+<div id="menu-mobile">
+
+  <div class="menu-mobile-container">
+    
+      <h3 class="menu-title">Menu</h3>
+      <nav class="menu-links-container">
+        <ul class="menu-links">
+          {% for item in menu.get_items %}
+           <li><a class="menu-link {{ item.current ? 'is-active' : '' }}" href="{{ item.link }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+  </div>
+
+</div>

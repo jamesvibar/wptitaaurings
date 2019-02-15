@@ -10,4 +10,8 @@
  */
 
 $context = Timber::get_context();
+$theme = new Timber\Theme();
+
+$context['logo'] = $theme->link . "/static/images/logo-colored.png";
+$context['bg'] = $theme->link . "/static/images/chicken-transparent.png";
 Timber::render( '404.twig', $context );

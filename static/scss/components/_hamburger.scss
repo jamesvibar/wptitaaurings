@@ -1,0 +1,10 @@
+#hamburger {
+  position: fixed;
+  left: 32px;
+  top: 4px;
+  z-index: _layers(hamburger);
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+}

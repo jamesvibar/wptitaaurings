@@ -16,10 +16,13 @@
 @import "./vendors/fontawesome/fontawesome";
 @import "./vendors/fontawesome/solid";
 @import "./vendors/fontawesome/brands";
+@import "./vendors/hamburgers/hamburgers";
 
 // Components
 @import "./components/buttons";
 @import "./components/map";
+@import "./components/menu-mobile";
+@import "./components/hamburger";
 @import "./components/foodMenuSlider";
 @import "./components/pagination";
 
@@ -34,5 +37,6 @@
 @import "./pages/blog";
 @import "./pages/single";
 @import "./pages/contact";
+@import "./pages/not-found404";
 @import "./pages/taxonomy-food-menu";
 @import "./pages/archive-food_product";

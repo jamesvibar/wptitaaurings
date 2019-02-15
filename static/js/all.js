@@ -3,6 +3,7 @@ import "../scss/main.scss"; //Import main stylesheet to compile it.
 import Topbar from "./components/topbar";
 import Map from "./components/map";
 import FoodMenuSlider from "./components/foodMenuSlider";
+import MenuToggle from "./components/menuToggle";
 
 document.addEventListener("DOMContentLoaded", () => {
   /**
@@ -22,4 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
    * @params {String} el - class/id of the slider
    */
   const foodSlider = new FoodMenuSlider("#foodMenuSlider");
+
+  /**
+   * Initialize the Mobile Menu.
+   * @params {String} el - class/id of the menu
+   */
+  const menuToggle = new MenuToggle();
 });

@@ -1,0 +1,41 @@
+#page-404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .page-404__logo {
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page-404__bg {
+    position: absolute;
+    bottom: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10;
+    pointer-events: none;
+    width: 50%;
+  }
+
+  .container-404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .lead {
+      font-size: 12vw;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.25em;
+    }
+  }
+}

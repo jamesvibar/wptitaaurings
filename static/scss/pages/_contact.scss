@@ -1,8 +1,9 @@
 #contact {
+  @include mq($until: tablet) {
+    margin: 0 auto;
+  }
+  
   .contact-main {
-    @include mq($until: tablet) {
-      margin: 0 auto;
-    }
 
     .contact__logo {
       max-width: 300px;

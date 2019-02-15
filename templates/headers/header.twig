@@ -5,11 +5,16 @@
 
 <header id="site-header"{{ h_role }}{% if not fn('is_front_page') %} class="header--small"{% endif %} style="background-image:url('{% if header_image %}{{ Image(header_image).src }}{%- else -%}{{ theme.link | e("esc_url") | relative }}/static/images/home_image.jpg{% endif %}')">
   <div class="container">
+    {# Hamburger Button #}
+    <button id="hamburger" class="hamburger hamburger--spin" type="button" {%- if fn('is_user_logged_in') -%} style="margin-top: 32px;"{%- endif -%}>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button> 
     {# Site Top Bar #}
     <div id="top-bar" class="row">
       <div class="col-sm-12 top-bar-container"{%- if fn('is_user_logged_in') -%} style="margin-top: 32px;"{%- endif -%}>
           {% include "/navs/nav.twig" with { 'menu': menu.get_items } %}
-
           <div id="site-logo">
             {{- logo | default('Please add your logo at Customizer > Site Identity') -}}
           </div>

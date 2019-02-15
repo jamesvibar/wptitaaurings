@@ -1,5 +1,26 @@
 {% extends "base.twig" %}
 
+{% block header %}
+{% endblock %}
+
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+	
+	<section id="page-404" class="section container">
+
+			<img class="page-404__logo" src="{{ logo | resize(200) }}" alt="The Queen of Chicken Wings">
+			<div class="container-404">
+				<h1 class="lead">404</h1>
+				<p class="textline">Sorry, but this page does not exist.</p>
+
+				<a href="{{ site.url }}" class="btn btn-primary">Go Home</a>
+			</div>
+	
+			<img class="page-404__bg" src={{ bg }} alt="Chicken">
+
+	</section>
+
+{% endblock %}
+
+{% block footer %}
+	{{ function('wp_footer') }}
 {% endblock %}
