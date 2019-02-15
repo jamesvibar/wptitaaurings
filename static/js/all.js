@@ -4,6 +4,7 @@ import Topbar from "./components/topbar";
 import Map from "./components/map";
 import FoodMenuSlider from "./components/foodMenuSlider";
 import MenuToggle from "./components/menuToggle";
+import SmoothScroll from "smooth-scroll";
 
 document.addEventListener("DOMContentLoaded", () => {
   /**
@@ -29,4 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * @params {String} el - class/id of the menu
    */
   const menuToggle = new MenuToggle();
+
+  // Smooth scroll on click
+  const smoothScroll = new SmoothScroll('a[href*="#"]');
 });
