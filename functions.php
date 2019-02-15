@@ -94,7 +94,8 @@ class TitaAurings extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		$context['menu'] = new Timber\Menu('primary_menu');
-		$context['logo'] = get_custom_logo();
+		$context['logo'] = get_template_directory_uri() . '/static/images/logo.png';
+		$context['footer_logo'] = get_template_directory_uri() . '/static/images/logo-icon.png';
 
 		// Footer Variables
 		$context['dynamic_sidebar'] = Timber::get_widgets('footer1');
@@ -159,7 +160,7 @@ class TitaAurings extends Timber\Site {
 		 * 
 		 * See: https://developer.wordpress.org/themes/functionality/custom-logo/
 		 */
-		add_theme_support('custom-logo');
+		// add_theme_support('custom-logo');
 
 		add_theme_support('widgets');
 		add_theme_support( 'menus' );
