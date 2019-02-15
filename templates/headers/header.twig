@@ -16,7 +16,7 @@
       <div class="col-sm-12 top-bar-container"{%- if fn('is_user_logged_in') -%} style="margin-top: 32px;"{%- endif -%}>
           {% include "/navs/nav.twig" with { 'menu': menu.get_items } %}
           <div id="site-logo">
-            <img src="{{- logo | resize(200) -}}" alt="Tita Auring's - Logo">
+            <a href="{{ site.home }}"><img src="{{- logo | resize(200) -}}" alt="Tita Auring's - Logo"></a>
           </div>
 
           <div class="top-bar__contact">
